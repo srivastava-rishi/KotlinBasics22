@@ -1,9 +1,11 @@
 package interviewprep.constructor
 
 
+
 fun main() {
+
   val cat = Constructor22()
-  val boy = Boy()
+  val boy = Boy("lioness",89)
 }
 
 
