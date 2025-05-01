@@ -3,9 +3,8 @@ package interviewprep.constructor
 
 
 fun main() {
-
-  val cat = Constructor22()
-  val boy = Boy("lioness",89)
+   // Constructor22()
+  //val boy = Boy("lioness",89)
 }
 
 
@@ -25,10 +24,12 @@ class Boy(
 }
 
 
-class Constructor22 {
-    constructor(){
-        println("Hiii")
-    }
+class Constructor22 (
+   private val kite: String
+) {
+//    constructor() : this("lion") {
+//        println("Hiii")
+//    }
     init {
         println("lion")
     }
