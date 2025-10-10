@@ -3,7 +3,7 @@ package interviewprep.varargvsvararg
 fun main() {
     val cat = UseOfVarArg()
     cat.usingArray(arrayOf("yooo")) // No need to create an array explicitly
-    cat.usingVararg("lion") // Must create array explicitly
+    cat.usingVararg("lion","kite") // Must create array explicitly
 }
 
 class UseOfVarArg {
