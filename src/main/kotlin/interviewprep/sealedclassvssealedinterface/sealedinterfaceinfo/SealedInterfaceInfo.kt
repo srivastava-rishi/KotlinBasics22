@@ -1,21 +1,15 @@
 package interviewprep.sealedclassvssealedinterface.sealedinterfaceinfo
 
-import interviewprep.sealedclassvssealedinterface.sealedclassinfo.HttpError
-import interviewprep.sealedclassvssealedinterface.sealedclassinfo.Ram
+import java.net.BindException
 
 /*
 Definition -
 - A sealed interface is similar to a sealed class, but it is used to represent a restricted set of interfaces rather than classes
-  or
--  A sealed class is a class that restricts which other classes can inherit from it, All subclasses must be
- declared within the same file as the sealed class itself.
 
 - Info -
     1. Sealed interfaces cannot have constructors with parameters, but they can have properties.
-    2. Sealed interfaces can only have abstract methods, but they can also have default implementations for those methods. as well as
-    Property initializers are not allowed in interfaces - val age = 1 (you can't do this)
-    example -
-    3. Sealed interfaces can only be implemented by classes and objects but not extended by other interfaces or sealed interfaces.
+    2. Sealed interfaces can only have abstract methods, abstract properties , data class's , normal class as well as object
+    3. Sealed interfaces can  be implemented by classes , objects , normal interfaces and sealed interfaces.
  */
 
 fun main() {
@@ -43,16 +37,37 @@ sealed interface Bird {
     }
 }
 
+sealed interface Na : Bird {
+    override fun sound(): String {
+        return "ioaccd"
+    }
+}
+
+interface Pot : Bird {
+    var fan: String
+    fun nooo() {
+        println("lion")
+    }
+}
+
+class Kitty8(override var fan: String, override val legs: Int) : Pot {
+    override fun nooo() {
+        //  super.nooo()
+        println(" I have overwriutten ir")
+    }
+}
+
 // 3.
 
 sealed interface Raju {
     object Hen : Raju
 }
 
-class Kitty: Raju {
+class Kitty : Raju {
 
 }
 
-object Bat: Raju {
+object Bat : Raju
 
-}
+interface A
+interface B : A

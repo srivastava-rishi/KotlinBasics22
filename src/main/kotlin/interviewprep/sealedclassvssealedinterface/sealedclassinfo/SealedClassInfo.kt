@@ -54,7 +54,7 @@ sealed class Dog : Animal() {
 
      2.  data class Hii(val hlp: Int, override val legs: Int) : Dog()
      */
-    data class Hii(val hlp: Int, override val legs: Int) : Dog()
+    //data class Hii(val hlp: Int, override val legs: Int) : Dog()
 }
 
 // 3 ->
